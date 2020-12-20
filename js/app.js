@@ -55,6 +55,7 @@ console.log(configFile.mapCoords[0]);
             thisLayerName = L.esri.imageMapLayer({
               url: baseURL.concat('/', thisTileLayer, '/ImageServer'),
               // maxZoom: 21
+              attribution: configFile.attribution
             });
             //set default layer if this service matches the assigned default on left map
             if (renameBackToOfficialServiceName(thisLayerString) == defaultLeftLayer) {
@@ -114,14 +115,15 @@ function renameBackToOfficialServiceName (layer) {
 }
 
 //FUNCTION to change basemap on dropdown change. Pass in basemap from dropdown and if it was left or right dropdown
-    function setBasemap(basemap, mapSide) {
+    function setBasemap(basemap, mapSide, attribution = "") {
         if (mapSide === "basemapsLeft") {
           //remove previous layer
             mapLeft.removeLayer(leftLayer);
             //create new layer
             leftLayer = L.esri.imageMapLayer({
               url: baseURL.concat('/', renameBackToOfficialServiceName(basemap), '/ImageServer'),
-              maxZoom: 21
+              maxZoom: 21,
+              attribution: attribution
             });
             //add new layer
             mapLeft.addLayer(leftLayer);
@@ -132,7 +134,8 @@ function renameBackToOfficialServiceName (layer) {
             } else {
                 rightLayer = L.esri.imageMapLayer({
                   url: baseURL.concat('/', renameBackToOfficialServiceName(basemap), '/ImageServer'),
-                  maxZoom: 21
+                  maxZoom: 21,
+                  attribution: attribution
                 });
             }
             mapRight.addLayer(rightLayer);
@@ -150,7 +153,7 @@ function renameBackToOfficialServiceName (layer) {
           document.getElementById("basemapsRight").focus();
       }
         var basemap = basemaps.value;
-        setBasemap(basemap, whichMap);
+        setBasemap(basemap, whichMap, configFile.attribution);
   }
 
     mapLeft.sync(mapRight);

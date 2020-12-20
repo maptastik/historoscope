@@ -41,6 +41,8 @@ var configFile = {
     // "COH_Dark_Gray"
   ],
 
+  attribution: "City of Raleigh",
+
   mapCoords: [
     35.77717,-78.646118
   ],

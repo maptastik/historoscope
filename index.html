@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/> <link rel="stylesheet" href="css/app.css"/>
   </head>
   <body>
-    <div id="map-container"></div>
-    <div id="map1">
-      <select name="basemaps-left" id="basemapsLeft" onchange="changeBasemap(basemapsLeft)"></select>
-    </div>
-    <div id="map2">
-      <select name="basemaps-right" id="basemapsRight" onchange="changeBasemap(basemapsRight)"></select>
+    <div class="wrapper">
+      <div class="box header" id="titleDiv">Raleigh Historoscope</div>
+      <div id="map-container" class="maps">
+        <div id="map1">
+          <select name="basemaps-left" id="basemapsLeft" onchange="changeBasemap(basemapsLeft)"></select>
+        </div>
+        <div id="map2">
+          <select name="basemaps-right" id="basemapsRight" onchange="changeBasemap(basemapsRight)"></select>
+        </div>
+      </div>
     </div>
     
     <!-- JS -->
