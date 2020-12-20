@@ -90,19 +90,19 @@ html, body {
 }
 
 @media (max-width: 500px) {
-    #basemaps-left-wrapper, #basemaps-right-wrapper {
+    /* #basemaps-left-wrapper, #basemaps-right-wrapper {
         position: absolute;
         top: auto;
         left: 15px;
         bottom: 25px;
-    }
+    } */
 
     #basemapsLeft, #basemapsRight{
-        width: 90%;
+        width: 60%;
         position: absolute;
-        bottom: 30px;
-        left: 10px;
+        top: 10px;
+        right: 10px;
         z-index: 4000;
-        padding: 10px;
+        padding: 2.5px;
     }
 }
