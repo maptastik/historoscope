@@ -3,7 +3,7 @@ var configFile = {
   base_URL: "https://maps.raleighnc.gov/images/rest/services",
 
   // initial map on left hand map frame
-  defaultLeft: "Orthos2019",
+  defaultLeft: "Orthos2020",
 
   // initial map on right hand map frame
   defaultRight: "Orthos1981",
@@ -30,6 +30,7 @@ var configFile = {
     ["Orthos2017", "2017 Aerial"],
     ["Orthos2018", "2018 Aerial"],
     ["Orthos2019", "2019 Aerial"],
+    ["Orthos2020", "2020 Aerial"],
   ],
 
   // services to exclude from Historoscope
